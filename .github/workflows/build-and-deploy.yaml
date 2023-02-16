@@ -43,7 +43,7 @@ jobs:
           git config user.email "xuefeng@kcalb.wang"
           git add .
           git commit -am "Feat: Github Action Auto Update Blog"
-          git push --force --quiet "https://${{secrets.token}}@github.com/w-xuefeng/xiaowu-blog.git" origin main
+          git push --force --quiet "https://${{secrets.token}}@github.com/w-xuefeng/xiaowu-blog.git" master:master
 
       - name: 6. deploy
         uses: appleboy/ssh-action@master
