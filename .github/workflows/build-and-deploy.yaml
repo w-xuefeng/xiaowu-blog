@@ -51,7 +51,7 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.SSH_PRIVATE_ID_RSA }}
-          script: cd ${{ secrets.DEPLOY_PATH }} && git pull --force
+          script: cd ${{ secrets.DEPLOY_PATH }} && git fetch --all && git reset --hard origin/main && git pull
 
 
 
